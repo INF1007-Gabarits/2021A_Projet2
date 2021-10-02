@@ -139,9 +139,9 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 </dl>	  
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-### 3.2. Module réservoir:<a name="reservoirm"></a>
+
 <dl>
- <dt> 3.2.1.creerListMolecules(hauteur,xmin,xmax,nbMolecules):</dt>
+ <dt> 3.1.5.creerListMolecules(hauteur,xmin,xmax,nbMolecules):</dt>
   <dd><p align='justify'>Crée une liste de molécules. La fonction reçoit la hauteur du réservoir, la position x minimale et maximale et le nombre de molécules a créé. Vous pouvez générer les positions <b>(x, y)</b>, les vitesses <b>(dx, dy)</b> et le rayon des molécules aléatoirement. Plus les vitesses sont rapides, moins l’affichage est réaliste. Plus les vitesses sont lentes, moins elles se stabiliseront rapidement.</p>
 </dd>
   <dd><b>Paramètres:</b></dd>
@@ -158,9 +158,30 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 </dl>	
 
 <dl>
-
+	
 -------------------------------------------------------------------------------------------------------------------------------------------------------
- <dt> 3.2.2.creerReservoir(hauteur,largeur,posParoi,nbMoleculesG,nbMoleculesD):</dt>
+<dl>
+<dt> 3.1.6.inverseDirMolecule(mol, paroiG, paroiD, hauteur):</dt>
+  <dd><p align='justify'>Si une molécule touche à une paroi extérieure ou intérieure, il faut que la molécule rebondisse. On sait si une molécule sort du réservoir si sa position en <b>x ou en y ± rayon</b> est hors limite. Par exemple, après un déplacement, si <b>x–rayon <= paroiG</b> alors il faut repositionner <b>x</b> sur le bord de la paroi et changer le signe de <b>dx</b>. Même chose pour la paroi de droite et même chose en <b>y</b> avec le haut et le bas.</p></dd>
+	  <dd><b>Paramètres:</b></dd>
+		<ol><ul>
+			<li> <b>mol[1x1]</b>      : dictionnaire de type molecule</li>
+			<li> <b>paroiG[1x1]</b>      : paroi gauche</li>
+			<li> <b>paroiD[1x1]</b>      : paroi droite</li>
+			<li> <b>hauteur[1x1]</b> : hauteur du réservoir</li>
+  	</ul></ol>
+	<dd><b>Renvoie:</b></dd>
+		<ol><ul>
+			<li> <b>mol[1x1]</b>: dictionnaire de type molecule </li>
+  	</ul></ol>
+<dd><p align='justify'><code> <b>Note:</b> Valide que la molécule reçues en paramètre est un dictionnaire de type molécule.</code></p></dd>
+</dl>
+	
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+### 3.2. Module réservoir:<a name="reservoirm"></a>
+
+ <dt> 3.2.1.creerReservoir(hauteur,largeur,posParoi,nbMoleculesG,nbMoleculesD):</dt>
   <dd><p align='justify'>Crée un réservoir et ajoute le nombre de molécules fourni pour chaque côté. La fonction reçoit la hauteur du réservoir, la largeur du réservoir, la position de la paroi et le nombre de molécules de chaque côté de la paroi et renvoie un dictionnaire qui contient tous les paramètres du réservoir.</p>
 		  
 <p>Nous retenons les molécules dans deux listes. Une liste de molécules pour le côté gauche et une pour le côté droit. Vous devez donc générer aléatoirement des positions qui se trouvent à l’intérieur des parois selon le côté. </p></dd>
@@ -176,29 +197,11 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 		<ol><ul>
 			<li> <b>reservoir[1x1]</b>: dictionnaire de type réservoir </li>
   	</ul></ol>
-</dl>	
+</dl>		
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 <dl>
-<dt> 3.2.3.inverseDirMolecule(mol, paroiG, paroiD, hauteur):</dt>
-  <dd><p align='justify'>Si une molécule touche à une paroi extérieure ou intérieure, il faut que la molécule rebondisse. On sait si une molécule sort du réservoir si sa position en <b>x ou en y ± rayon</b> est hors limite. Par exemple, après un déplacement, si <b>x–rayon <= paroiG</b> alors il faut repositionner <b>x</b> sur le bord de la paroi et changer le signe de <b>dx</b>. Même chose pour la paroi de droite et même chose en <b>y</b> avec le haut et le bas.</p></dd>
-	  <dd><b>Paramètres:</b></dd>
-		<ol><ul>
-			<li> <b>mol[1x1]</b>      : dictionnaire de type molecule</li>
-			<li> <b>paroiG[1x1]</b>      : paroi gauche</li>
-			<li> <b>paroiD[1x1]</b>      : paroi droite</li>
-			<li> <b>hauteur[1x1]</b> : hauteur du réservoir</li>
-  	</ul></ol>
-	<dd><b>Renvoie:</b></dd>
-		<ol><ul>
-			<li> <b>mol[1x1]</b>: dictionnaire de type molecule </li>
-  	</ul></ol>
-<dd><p align='justify'><code> <b>Note:</b> Valide que la molécule reçues en paramètre est un dictionnaire de type molécule.</code></p></dd>
-</dl>	
-
--------------------------------------------------------------------------------------------------------------------------------------------------------
-<dl>
-<dt> 3.2.4.colision(reservoir):</dt>
+<dt> 3.2.2.colision(reservoir):</dt>
   <dd><p align='justify'>Nous implémentons un algorithme très vorace qui ne nous permet pas d’utiliser beaucoup de molécules. Nous pourrions optimiser mais les techniques nécessaires dépassent les objectifs de ce projet. </p>
 
 <p align='justify'> Donc, nous allons vérifier chaque molécule avec toutes les autres pour vérifier si elles se touchent. </p>
@@ -220,7 +223,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 <dl>
-<dt> 3.2.5.inverseDirMolecules(reservoir):</dt>
+<dt> 3.2.3.inverseDirMolecules(reservoir):</dt>
   <dd><p align='justify'>Ajuste la direction des molécules qui touchent aux parois (des deux côtés). </p></dd>
 	<dd><b>Paramètres:</b></dd>
 		<ol><ul>
@@ -235,7 +238,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 <dl>
-<dt> 3.2.6.getTemperature(reservoir, cote):</dt>
+<dt> 3.2.4.getTemperature(reservoir, cote):</dt>
   <dd><p align='justify'>Calcule la température de chaque côté du réservoir. La fonction reçoit deux paramètres, un dictionnaire de type réservoir et le côté duquel on veut calculer la température. </p></dd>
 	
   <dd><p align='justify'>Pour calculer la température, on va utiliser l’équation suivante: </p></dd>
@@ -282,7 +285,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 <dl>
-<dt> 3.2.7.affichage(reservoir):</dt>
+<dt> 3.2.5.affichage(reservoir):</dt>
   <dd><p align='justify'>Nous vous offrons le code de cette fonction qui l'affiche du déplacement des molécules.  </p></dd>
 	<dd><b>Paramètres:</b></dd>
 		<ol><ul>
@@ -293,7 +296,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 <dl>
-<dt> 3.2.7.deplacerMolecules(reservoir):</dt>
+<dt> 3.2.6.deplacerMolecules(reservoir):</dt>
   <dd><p align='justify'>Pour obtenir une simulation correcte et simuler la réalité, l’ordre d’exécution est important. Vous devez dans l’ordre: </p>
 	  
 * Ajuster la direction des molécules qui touchent aux parois (des deux côtés) <b> inverseDirMolecules(reservoir) </b>
