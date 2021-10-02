@@ -195,8 +195,11 @@ Dans ce qui suit, nous expliquons les différents concepts.
 
 <p align='justify'> Donc, nous allons vérifier chaque molécule avec toutes les autres pour vérifier si elles se touchent. </p>
 
-<p align='justify'> Voici l’algorithme global :  </p></dd>
-	<dd><b>Paramètres:</b></dd>
+<p align='justify'> Voici l’algorithme global :  </p>
+
+<p align='justify'>Il faudrait porter attention pour ne pas déplacer deux fois des molécules qui viennent de se toucher. Nous ne vous l’imposons pas. Cela aura pour effet que de temps à autres, deux molécules se chevauchent. Ce n’est pas bien grave. </p></dd>
+	
+<dd><b>Paramètres:</b></dd>
 		<ol><ul>
 			<li> <b>reservoir[1x1]</b>      : dictionnaire de type réservoir</li>
   	</ul></ol>
