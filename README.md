@@ -61,6 +61,14 @@ Dans ce qui suit, nous expliquons les différents concepts.
 
 ## 3. Modules à implémenter <a name="module"></a>
 
+La figure 1 represente l'arbre des appels de fonctions à implémenter.
+
+<p align="center">
+  <img src="Img/Imp_01.png" alt>
+    <br>
+    <em><b>Fig. 1 :Arbre des appels de fonctions.</b></em>
+</p>
+
 ### 3.1. Module molécule:<a name="moleculem"></a> 
 
 <dl>
