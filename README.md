@@ -10,7 +10,7 @@
   - [Structure de données d'une molécule](#molecule)  
   - [Structure de données d'un réservoir](#reservoir)
 - [Modules à implémenter](#module)
-  - [Module molécule](#molecule) 
+  - [Module molécule](#moleculem) 
   - [Module réservoir](#reservoirm)
 - [Barème](#bareme)
 - [Annexe: Guide et normes de codage](#annexe)
@@ -61,7 +61,7 @@ Dans ce qui suit, nous expliquons les différents concepts.
 
 ## 3. Modules à implémenter <a name="module"></a>
 
-### 3.1. Module molécule:<a name="molecule"></a> 
+### 3.1. Module molécule:<a name="moleculem"></a> 
 
 <dl>
   <dt>3.1.1. creerMolecule(x, y, dx, dy, rayon):</dt>
