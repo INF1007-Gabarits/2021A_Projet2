@@ -312,7 +312,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 </dl>	
 
 
-## 4. Barème /30 <a name="bareme"></a>
+## 4. Barème /20 <a name="bareme"></a>
 
 |**Nom des fonctions**|**Nombre de points attribuer**|
 | :- | :- |
