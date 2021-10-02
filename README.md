@@ -7,7 +7,7 @@
 - [Directives particulières](#directives)
 - [Énoncé de travail](#enonce)
 - [Structure de données](#structure)
-  - [Structure de données d'une molécule](#molecule)  
+  - [Structure de données d'une molécule](#molécule)  
   - [Structure de données d'un réservoir](#reservoir)
 - [Modules à implémenter](#module)
   - [Module molécule](#moleculem) 
@@ -37,7 +37,7 @@ Dans ce qui suit, nous expliquons les différents concepts.
 ## 2. Structure de données  <a name="structure"></a>
 <p align='justify'> Nous implémenterons deux dictionnaires. Le premier représente une molécule et l’autre le réservoir séparé par une paroi qui contient les molécules. Le détail de ces dictionnaires ainsi que les calculs nécessaires à la simulation vous sont présentés dans les prochaines sections.</p>
 
-### 2.1. Structure de données d'une molécule <a name="molecule"></a>
+### 2.1. Structure de données d'une molécule <a name="molécule"></a>
 <p align='justify'> Une molécule est représentée par un dictionnaire de cinq clés:</p>
 <ol><ul>
 <li> <b> x</b>  : position en x de la molécule</li>
@@ -61,7 +61,7 @@ Dans ce qui suit, nous expliquons les différents concepts.
 
 ## 3. Modules à implémenter <a name="module"></a>
 
-La figure 1 represente l'arbre des appels de fonctions à implémenter.
+La figure 1 représente l'arbre des appels de fonctions à implémenter.
 
 <p align="center">
   <img src="Img/Imp_01.png" alt>
@@ -119,13 +119,13 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 		<ol><ul>
 			<li><b>mol[1x1]</b>: dictionnaire de type molécule.</li>
   	</ul></ol>
-<dd><p align='justify'><code> <b>Note:</b> Valide que la molécule reçuesen paramètre est un dictionnaire de type molécule.</code></p></dd>
+<dd><p align='justify'><code> <b>Note:</b> Valide que la molécule reçue en paramètre est un dictionnaire de type molécule.</code></p></dd>
 </dl>	
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 <dl>
  <dt> 3.1.4. ajusteDirApresCollision(mol_1, mol_2):</dt>
-  <dd><p align='justify'>Nous vous offrons le code de cette fonction qui provient du WEB et que j’ai adapté. Vous ne devez pas la modifier. </p></dd>
+  <dd><p align='justify'>Nous vous offrons le code de cette fonction qui provient du WEB et que j’ai adaptée. Vous ne devez pas la modifier. </p></dd>
   <dd><b>Paramètres:</b></dd>
 		<ol><ul>
 			<li><b>mol_1[1x1]</b>: dictionnaire de type molécule.</li>
@@ -149,7 +149,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 			<li> <b>hauteur[1x1]</b>      : hauteur du réservoir</li>
 			<li> <b>xmin[1x1]</b>      : position x minimale</li>
 			<li> <b>xmax[1x1]</b> : position x maximale</li>
-			<li> <b>nbMolecules[1x1]</b> : nombre de molécule a créé</li>
+			<li> <b>nbMolecules[1x1]</b> : nombre de molécules a créé</li>
   	</ul></ol>
 	<dd><b>Renvoie:</b></dd>
 		<ol><ul>
@@ -165,16 +165,16 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
   <dd><p align='justify'>Si une molécule touche à une paroi extérieure ou intérieure, il faut que la molécule rebondisse. On sait si une molécule sort du réservoir si sa position en <b>x ou en y ± rayon</b> est hors limite. Par exemple, après un déplacement, si <b>x–rayon <= paroiG</b> alors il faut repositionner <b>x</b> sur le bord de la paroi et changer le signe de <b>dx</b>. Même chose pour la paroi de droite et même chose en <b>y</b> avec le haut et le bas.</p></dd>
 	  <dd><b>Paramètres:</b></dd>
 		<ol><ul>
-			<li> <b>mol[1x1]</b>      : dictionnaire de type molecule</li>
+			<li> <b>mol[1x1]</b>      : dictionnaire de type molécule</li>
 			<li> <b>paroiG[1x1]</b>      : paroi gauche</li>
 			<li> <b>paroiD[1x1]</b>      : paroi droite</li>
 			<li> <b>hauteur[1x1]</b> : hauteur du réservoir</li>
   	</ul></ol>
 	<dd><b>Renvoie:</b></dd>
 		<ol><ul>
-			<li> <b>mol[1x1]</b>: dictionnaire de type molecule </li>
+			<li> <b>mol[1x1]</b>: dictionnaire de type molécule </li>
   	</ul></ol>
-<dd><p align='justify'><code> <b>Note:</b> Valide que la molécule reçues en paramètre est un dictionnaire de type molécule.</code></p></dd>
+<dd><p align='justify'><code> <b>Note:</b> Valide que la molécule reçue en paramètre est un dictionnaire de type molécule.</code></p></dd>
 </dl>
 	
 -------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -188,10 +188,10 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
   <dd><b>Paramètres:</b></dd>
 		<ol><ul>
 			<li> <b>hauteur[1x1]</b>      : hauteur du réservoir</li>
-			<li> <b>largeur[1x1]</b>      : largeur du réservoi</li>
+			<li> <b>largeur[1x1]</b>      : largeur du réservoir</li>
 			<li> <b>posPar[1x1]</b> : position de la paroi</li>
-			<li> <b>nbMoleculesG[1x1]</b> : nombre de molécule de la partie gauche du réservoir /li>
-			<li> <b>nbMoleculesD[1x1]</b> : nombre de molécule de la partie droite du réservoir /li>
+			<li> <b>nbMoleculesG[1x1]</b> : nombre de molécules de la partie gauche du réservoir /li>
+			<li> <b>nbMoleculesD[1x1]</b> : nombre de molécules de la partie droite du réservoir /li>
   	</ul></ol>
 	<dd><b>Renvoie:</b></dd>
 		<ol><ul>
@@ -202,13 +202,13 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 <dl>
 <dt> 3.2.2.colision(reservoir):</dt>
-  <dd><p align='justify'>Nous implémentons un algorithme très vorace qui ne nous permet pas d’utiliser beaucoup de molécules. Nous pourrions optimiser mais les techniques nécessaires dépassent les objectifs de ce projet. </p>
+  <dd><p align='justify'>Nous implémentons un algorithme très vorace qui ne nous permet pas d’utiliser beaucoup de molécules. Nous pourrions optimiser, mais les techniques nécessaires dépassent les objectifs de ce projet. </p>
 
 <p align='justify'> Donc, nous allons vérifier chaque molécule avec toutes les autres pour vérifier si elles se touchent. </p>
 
 <p align='justify'> Voici l’algorithme global :  </p>
 
-<p align='justify'>Il faudrait porter attention pour ne pas déplacer deux fois des molécules qui viennent de se toucher. Nous ne vous l’imposons pas. Cela aura pour effet que de temps à autres, deux molécules se chevauchent. Ce n’est pas bien grave. </p></dd>
+<p align='justify'>Il faudrait porter attention pour ne pas déplacer deux fois des molécules qui viennent de se toucher. Nous ne vous l’imposons pas. Cela aura pour effet que de temps à autre, deux molécules se chevauchent. Ce n’est pas bien grave. </p></dd>
 	
 <dd><b>Paramètres:</b></dd>
 		<ol><ul>
@@ -218,7 +218,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 		<ol><ul>
 			<li> <b>reservoir[1x1]</b>: dictionnaire de type réservoir </li>
   	</ul></ol>
-<dd><p align='justify'><code> <b>Note:</b> Valide que le réservoir reçues en paramètre est un dictionnaire de type réservoir.</code></p></dd>
+<dd><p align='justify'><code> <b>Note:</b> Valide que le réservoir reçu en paramètre est un dictionnaire de type réservoir.</code></p></dd>
 </dl>	
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -233,7 +233,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 		<ol><ul>
 			<li> <b>reservoir[1x1]</b>: dictionnaire de type réservoir </li>
   	</ul></ol>
-<dd><p align='justify'><code> <b>Note:</b> Valide que le réservoir reçues en paramètre est un dictionnaire de type réservoir.</code></p></dd>
+<dd><p align='justify'><code> <b>Note:</b> Valide que le réservoir reçu en paramètre est un dictionnaire de type réservoir.</code></p></dd>
 </dl>	
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -271,7 +271,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 	<dd><b>Paramètres:</b></dd>
 		<ol><ul>
 			<li> <b>reservoir[1x1]</b>  : dictionnaire de type réservoir</li>
-			<li> <b>coter[1x1]</b>      : le cote du reservoire ("Droit" ou "Gauche"</li>
+			<li> <b>coter[1x1]</b>      : le côté du réservoir ("Droit" ou "Gauche"</li>
   	</ul></ol>
 	
 <dd><b>Renvoie:</b></dd>
@@ -279,7 +279,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 			<li> <b>T[1x1]</b>  : Température du côté du réservoir</li>
   	</ul></ol>
 	
-<dd><p align='justify'><code> <b>Note:</b> Valide que le réservoir reçues en paramètre est un dictionnaire de type réservoir.</code></p></dd>
+<dd><p align='justify'><code> <b>Note:</b> Valide que le réservoir reçu en paramètre est un dictionnaire de type réservoir.</code></p></dd>
 </dl>	
 
 
@@ -291,7 +291,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 		<ol><ul>
 			<li> <b>reservoir[1x1]</b>      : dictionnaire de type réservoir</li>
   	</ul></ol>
-<dd><p align='justify'><code> <b>Note:</b> Valide que le réservoir reçues en paramètre est un dictionnaire de type réservoir.</code></p></dd>
+<dd><p align='justify'><code> <b>Note:</b> Valide que le réservoir reçu en paramètre est un dictionnaire de type réservoir.</code></p></dd>
 </dl>	
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -311,7 +311,7 @@ La figure 1 represente l'arbre des appels de fonctions à implémenter.
 		<ol><ul>
 			<li> <b>reservoir[1x1]</b>: dictionnaire de type réservoir </li>
   	</ul></ol>
-<dd><p align='justify'><code> <b>Note:</b> Valide que le réservoir reçues en paramètre est un dictionnaire de type réservoir.</code></p></dd>
+<dd><p align='justify'><code> <b>Note:</b> Valide que le réservoir reçu en paramètre est un dictionnaire de type réservoir.</code></p></dd>
 </dl>	
 
 
