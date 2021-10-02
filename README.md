@@ -11,8 +11,7 @@
   - [Structure de données d'un réservoir](#reservoir)
 - [Modules à implémenter](#module)
   - [Module molécule](#molecule) 
-  - [Module réservoir](#reservoir)
-  - [Module principale](#principale)
+  - [Module réservoir](#reservoirm)
 - [Barème](#bareme)
 - [Annexe: Guide et normes de codage](#annexe)
 
@@ -132,7 +131,7 @@ Dans ce qui suit, nous expliquons les différents concepts.
 </dl>	  
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-### 3.2. Module réservoir:<a name="reservoir"></a>
+### 3.2. Module réservoir:<a name="reservoirm"></a>
 <dl>
  <dt> 3.2.1.creerListMolecules(hauteur,xmin,xmax,nbMolecules):</dt>
   <dd><p align='justify'>Crée une liste de molécules. La fonction reçoit la hauteur du réservoir, la position x minimale et maximale et le nombre de molécules a créé. Vous pouvez générer les positions <b>(x, y)</b>, les vitesses <b>(dx, dy)</b> et le rayon des molécules aléatoirement. Plus les vitesses sont rapides, moins l’affichage est réaliste. Plus les vitesses sont lentes, moins elles se stabiliseront rapidement.</p>
