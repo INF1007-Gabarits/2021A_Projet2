@@ -292,11 +292,11 @@ Dans ce qui suit, nous expliquons les différents concepts.
 * Afficher les molécules <b> affichage(reservoir) </b>  
 * Vérifier les collisions <b> colision(reservoir) </b>  
 
-	<dd><b>Paramètres:</b></dd>
+<dd><b>Paramètres:</b></dd>
 		<ol><ul>
 			<li> <b>reservoir[1x1]</b>      : dictionnaire de type réservoir</li>
   	</ul></ol>
-	<dd><b>Renvoie:</b></dd>
+<dd><b>Renvoie:</b></dd>
 		<ol><ul>
 			<li> <b>reservoir[1x1]</b>: dictionnaire de type réservoir </li>
   	</ul></ol>
