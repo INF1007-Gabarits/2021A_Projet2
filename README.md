@@ -3,7 +3,7 @@
 </p>
 
 
-# Projet 2: Fonctions, lecture et écriture de fichiers
+# Projet 2: Structures de données, fonctions
 - [Directives particulières](#directives)
 - [Énoncé de travail](#enonce)
 - [Structure de données](#structure)
