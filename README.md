@@ -55,7 +55,7 @@ Dans ce qui suit, nous expliquons les différents concepts.
 <li> <b>posPar</b> : position de la paroi</li>
 <li> <b>mG</b>     : liste qui contient les molécules de la partie gauche du réservoir</li>
 <li> <b>mD</b>     : liste qui contient les molécules de la partie droite du réservoir </li>
-<li> <b>lCG</b>    : liste des collisions de la partie droite du réservoir</li> 
+<li> <b>lCG</b>    : liste des collisions de la partie gauche du réservoir</li> 
 <li> <b>lCD</b>    : liste des collisions de la partie droite du réservoir </li>
 </ul></ol>
 
