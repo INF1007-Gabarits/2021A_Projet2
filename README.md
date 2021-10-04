@@ -3,7 +3,7 @@
 </p>
 
 
-# TP3: Fonctions, lecture et écriture de fichiers
+# Projet 2: Fonctions, lecture et écriture de fichiers
 - [Directives particulières](#directives)
 - [Énoncé de travail](#enonce)
 - [Structure de données](#structure)
