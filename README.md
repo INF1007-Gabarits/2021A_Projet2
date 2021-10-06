@@ -206,8 +206,14 @@ La figure 1 représente l'arbre des appels de fonctions à implémenter.
 
 <p align='justify'> Donc, nous allons vérifier chaque molécule avec toutes les autres pour vérifier si elles se touchent. </p>
 
-<p align='justify'> Voici l’algorithme global :  </p>
-
+<p align='justify'> Voici l’algorithme global:  </p>
+	  
+<p align="center">
+  <img src="Img/Img_03.png" alt>
+    <br>
+    <em><b>Fig. 2 :Algorithme qui vérifie les collisions.</b></em>
+</p>
+	  
 <p align='justify'>Il faudrait porter attention pour ne pas déplacer deux fois des molécules qui viennent de se toucher. Nous ne vous l’imposons pas. Cela aura pour effet que de temps à autre, deux molécules se chevauchent. Ce n’est pas bien grave. </p></dd>
 	
 <dd><b>Paramètres:</b></dd>
